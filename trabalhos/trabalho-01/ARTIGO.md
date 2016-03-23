@@ -44,7 +44,7 @@ Fortran é uma linguagem procedural e orientada a objetos, além de ser uma ling
 
 Quanto a sua tipagem, ela é forte e estática.
 
-Por ser uma linguagem com poucas funções da linguagem, e que por isso não precisa ficar trocando o contexto de execução toda hora (chamar as funções), e permitir a criação de programas que primam pela velocidade de execução, a linguagem Fortran é muito usada em aplicações científicas computacionalmente intensivas.
+Por ser uma linguagem que não possui muitas funções da linguagem, e que por isso não precisa ficar trocando o contexto de execução toda hora (chamar as funções), e permitir a criação de programas que primam pela velocidade de execução, a linguagem Fortran é muito usada em aplicações científicas computacionalmente intensivas.
 
 
 #Avaliação Comparativa
