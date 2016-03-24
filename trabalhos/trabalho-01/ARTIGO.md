@@ -7,7 +7,7 @@ A linguagem de programação **Fortran** surgiu na década de **1950**, para ser
 
 O primeiro compilador de Fortran foi desenvolvido por uma equipe da **IBM** chefiada por John W. Backus. Se pararmos para analisar, a linguagem Fortran, por ser mais antiga, mais influenciou do que foi influenciada.
 
-Fortran foi influenciado apenas pela **Speedcoding**. Dentre as linguagens influenciadas, por Fortran I e suas "evoluções", estão: ALGOL 58 (e suas versões posteriores), BASIC, C, PL/I, entre outras, que foram influenciadas por linguagens influenciadas por Fortran (influenciadas indiretamente por Fortran).
+Fortran foi influenciado apenas pela **Speedcoding**. Dentre as linguagens influenciadas, por Fortran I e suas "evoluções", estão: ALGOL 58, BASIC, PL/I, entre outras.
 
 Se formos tentar botar essa "árvore" de influências em uma linha do tempo ela ficaria parecida com essa:
 
@@ -17,15 +17,9 @@ Se formos tentar botar essa "árvore" de influências em uma linha do tempo ela 
 
 1958: Fortran II e ALGOL 58
 
-1960: ALGOL 60 (influenciado pela ALGOL 58)
-
 1962: Fortran IV
 
 1964: BASIC e PL/I
-
-1968: ALGOL 68 (influenciada por ALGOL 60)
-
-1971: C (influenciada por ALGOL 68)
 
 1978: Fortran 77
 
@@ -129,4 +123,4 @@ Wikipedia: [https://pt.wikipedia.org/wiki/Fortran#Pontos_fortes.2Ffracos_da_sint
 
 Wikipedia: [https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_procedural](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_procedural)
 
-*assei direto: [https://www.passeidireto.com/arquivo/1625736/exercicioscap1](https://www.passeidireto.com/arquivo/1625736/exercicioscap1)
+Passei direto: [https://www.passeidireto.com/arquivo/1625736/exercicioscap1](https://www.passeidireto.com/arquivo/1625736/exercicioscap1)
