@@ -123,3 +123,5 @@ Wikipedia: [https://pt.wikipedia.org/wiki/Fortran#Pontos_fortes.2Ffracos_da_sint
 Wikipedia: [https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_procedural](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_procedural)
 
 Passei direto: [https://www.passeidireto.com/arquivo/1625736/exercicioscap1](https://www.passeidireto.com/arquivo/1625736/exercicioscap1)
+
+Wikipedia: [https://en.wikipedia.org/wiki/Fortran#Code_examples](https://en.wikipedia.org/wiki/Fortran#Code_examples)
