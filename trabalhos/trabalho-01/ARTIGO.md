@@ -60,10 +60,10 @@ C2345678901234567890123456789012345678901234567890123456789012345
 PROGRAM BASKHARA
 
 C
-    REAL :: A,B,C, DELTA, X1,X2, RE, IM
+REAL :: A,B,C, DELTA, X1,X2, RE, IM
 
 C
-    PRINT *, "Este programa resolve uma equação de 2o.grau"
+PRINT *, "Este programa resolve uma equação de 2o.grau"
       
 PRINT *, "no formato: a*x**2 + b*x + c = 0"
 
