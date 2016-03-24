@@ -5,7 +5,7 @@ A linguagem de programação **Fortran** surgiu na década de **1950**, para ser
 
 #Origens e Influências
 
-      O primeiro compilador de Fortran foi desenvolvido por uma equipe da **IBM** chefiada por John W. Backus. Se pararmos para analisar, a linguagem Fortran, por ser mais antiga, mais influenciou do que foi influenciada.
+O primeiro compilador de Fortran foi desenvolvido por uma equipe da **IBM** chefiada por John W. Backus. Se pararmos para analisar, a linguagem Fortran, por ser mais antiga, mais influenciou do que foi influenciada.
 
 Fortran foi influenciado apenas pela **Speedcoding**. Dentre as linguagens influenciadas, por Fortran I e suas "evoluções", estão: ALGOL 58, BASIC, PL/I, entre outras.
 
@@ -60,10 +60,10 @@ C2345678901234567890123456789012345678901234567890123456789012345
 PROGRAM BASKHARA
 
 C
-REAL :: A,B,C, DELTA, X1,X2, RE, IM
+    REAL :: A,B,C, DELTA, X1,X2, RE, IM
 
 C
-PRINT *, "Este programa resolve uma equação de 2o.grau"
+    PRINT *, "Este programa resolve uma equação de 2o.grau"
       
 PRINT *, "no formato: a*x**2 + b*x + c = 0"
 
