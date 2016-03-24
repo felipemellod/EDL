@@ -1,6 +1,7 @@
 #Introdução
 
 A linguagem de programação **Fortran** surgiu na década de **1950**, para ser mais específico, o primeiro compilador FORTRAN foi desenvolvido em **1954-57**, tendo sido terminado em **1957**. O nome Fortran é um acrônimo da expressão "IBM Mathematical **FOR**mula **TRAN**slation System", que inicialmente era chamado "FORTRAN", mas a capitalização foi ignorada em versões mais recentes.
+Fortran foi especialmente desenvolvida para a computação numérica e a computação científica. Essa linguagem veio para dominar a área de aplicações científicas, e de engenharia, desde sua criação, e tem sido utilizada por mais de meio século em áreas computacionalmente intensivas, como física computacional, química computacional, análise de elementos finitos, entre outras. Fortran é uma linguagem popular para computação de alta performance e é usado por programas que ranqueiam os supercomputadores mais rápidos do mundo.
 
 
 #Origens e Influências
@@ -37,8 +38,6 @@ Se formos tentar botar essa "árvore" de influências em uma linha do tempo ela 
 Fortran é uma linguagem procedural e orientada a objetos, além de ser uma linguagem compilada.
 
 Quanto a sua tipagem, ela é forte e estática.
-
-Por ser uma linguagem que não possui muitas funções da linguagem, e que por isso não precisa ficar trocando o contexto de execução toda hora (chamar as funções), e permitir a criação de programas que primam pela velocidade de execução, a linguagem Fortran é muito usada em aplicações científicas computacionalmente intensivas.
 
 
 #Avaliação Comparativa
