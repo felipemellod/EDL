@@ -1,4 +1,4 @@
-###Apresentação inicial do curso###
+#Apresentação inicial do curso
 
 Bom, meu nome é **Felipe Mello Diniz**, eu tenho **21 anos**, e vou contar um pouco como eu decidi cursar ***Ciência da computação***.
 Desde os 15 anos sempre quis ser engenheiro mecânico, pelo fato de gostar muito de matemática, física e química. Em 2013 fui aprovado na **UFRJ** em ***Ciências Matemáticas e da Terra***, decidi dar uma chance para ver como seria o curso, e lá eu tive o primeiro contato com a programação. Fiz um período de programação em **Python**, e gostei muito de como os programas funcionavam. 
