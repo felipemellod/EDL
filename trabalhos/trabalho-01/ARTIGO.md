@@ -7,15 +7,15 @@ Swift é uma linguagem de programação compilada criada pela Apple para o desen
 
 O projeto para a criação dessa linguagem de programação foi liderado pelo programador Chris Lattner, que contou com a eventual ajuda de alguns dos desenvolvedores da Apple. Esse projeto teve início em 2010, e a primeira versão da linguagem foi apresentada em 2014, na WWDC desse mesmo ano, e teve versões novas apresentadas em 2015 e em 2016. Swift foi desenvolvido, principalmente, como uma alternativa ao Objective-C, porém com uma escrita mais simples, e com maior expressividade, além de outras melhorias. 
 	Swift foi influenciada por várias linguagens, como: C, C#, Objective-C, D, Haskell, Python, Ruby e Rust. Para compreender melhor como se deram essas influências segue a linha do tempo:
-      
-•	1972: C
-•	1983: Objective-C
-•	1990: Haskell
-•	1991: Python
-•	1995: Ruby
-•	2000: C#
-•	2001: D
-•	2010: Rust
+	
+	1972: C
+	1983: Objective-C
+	1990: Haskell
+	1991: Python
+	1995: Ruby
+	2000: C#
+	2001: D
+	2010: Rust
 
 E, apesar de ser uma linguagem de programação nova, ela já influenciou algumas linguagens, como Ruby – onde inspirou o “safe navigation operator” (Operador de navegação segura) – e Rust – onde inspirou o construtor “if let”.
 
@@ -23,14 +23,14 @@ E, apesar de ser uma linguagem de programação nova, ela já influenciou alguma
 #Classificação
 
 Swift é classificada como uma linguagem multi-paradigma, sendo:
-•	Imperativa
-•	Funcional
-•	Orientada a Objetos
+	Imperativa
+	Funcional
+	Orientada a Objetos
 
 Quanto a sua tipagem, ela é considerada:
-•	Estática
-•	Forte
-•	Inferida
+	Estática
+	Forte
+	Inferida
 
 
 #Avaliação Comparativa
@@ -84,61 +84,67 @@ incrementByTen()
 •	**C**
 
 **(Exemplo que não funciona)**
+
 #include <stdio.h>
+
 typedef struct closure_s {
-	void (*incrementer) ();
-	void (*emitter) ();
+  void (*incrementer) ();
+  void (*emitter) ();
 } closure;
 
 closure emit(int in) {
-	void incrementer() {
-		in++;
-	}
-	
-	void emitter() {
-		printf("%d\n", in);
-	}
-	
-	return (closure) {
-		incrementer,
-		emitter
-	};
+
+  void incrementer() {
+    in++;
+  }
+
+  void emitter() {
+    printf("%d\n", in);
+  }
+
+  return (closure) {
+    incrementer,
+    emitter
+  };
 }
 
 main() {
-	closure test[] = {emit(10), emit(20)};
-	test[0] . incrementer();
-	test[1] . incrementer();
-	
-	test[0] . emitter();
-	test[1] . emitter();
+  closure test[] = {
+    emit(10),
+    emit(20)
+  };
+
+  test[0] . incrementer();
+  test[1] . incrementer();
+
+  test[0] . emitter();
+  test[1] . emitter();
 }
 
 **(Exemplo que, teoricamente, funciona)**
+
 #include <callback.h>
 #include <stdio.h>
-
 static void incrementer_(int *in) {
-	++*in;
+    ++*in;
 }
 static void emitter_(int *in) {
-	printf("%d\n", *in);
+    printf("%d\n", *in);
 }
-
 int main() {
-	int in1 = 10, in2 = 20;
-	int (*incrementer1)() = alloc_callback(&incrememnter_, &in1);
-	int (*emitter1)() = alloc_callback(&emitter_, &in1);
-	int (*incrementer2)() = alloc_callback(&incrememnter_, &in2);
-	int (*emitter2)() = alloc_callback(&emitter_, &in2);
-	incrementer1();
-	incrementer2();
-	emitter1();
-	emitter2();
-	free_callback(incrementer1);
-	free_callback(incrementer2);
-	free_callback(emitter1);
-	free_callback(emitter2);
+    int in1 = 10, in2 = 20;
+    int (*incrementer1)() = alloc_callback(&incrememnter_, &in1);
+    int (*emitter1)() = alloc_callback(&emitter_, &in1);
+    int (*incrementer2)() = alloc_callback(&incrememnter_, &in2);
+    int (*emitter2)() = alloc_callback(&emitter_, &in2);
+    incrementer1();
+    incrementer2();
+    emitter1();
+    emitter2();
+    free_callback(incrementer1);
+    free_callback(incrementer2);
+    free_callback(emitter1);
+    free_callback(emitter2);
 }
 
 A escolha desses códigos ajuda a exemplificar o que foi dito na comparação entre as linguagens. Neles é possível ver que o código escrito em Swift – usando Closure – é consideravelmente mais enxuto, fácil de escrever, e de entender. Não há nada que atrapalhe o entendimento do código. Já em C, observa-se um código maior, mais complicado de escrever – pois precisa de um bom conhecimento da linguagem (uso de ponteiros) – e mais difícil de se compreender o que está sendo feito. 
