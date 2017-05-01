@@ -109,7 +109,6 @@ int main(){
 	closure test[] = {emit(10), emit(7)};
 	test[0].incrementer();
 	test[1].incrementer();
-	
 	test[0].emitter();
 	test[1].emitter();
 }
