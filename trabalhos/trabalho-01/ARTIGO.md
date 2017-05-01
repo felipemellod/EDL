@@ -1,127 +1,163 @@
 #Introdução
 
-A linguagem de programação **Fortran** surgiu na década de **1950**, para ser mais específico, o primeiro compilador FORTRAN foi desenvolvido em **1954-57**, tendo sido terminado em **1957**. O nome Fortran é um acrônimo da expressão "IBM Mathematical **FOR**mula **TRAN**slation System", que inicialmente era chamado "FORTRAN", mas a capitalização foi ignorada em versões mais recentes.
-Fortran foi especialmente desenvolvida para a computação numérica e a computação científica. Essa linguagem veio para dominar a área de aplicações científicas, e de engenharia, desde sua criação, e tem sido utilizada por mais de meio século em áreas computacionalmente intensivas, como física computacional, química computacional, análise de elementos finitos, entre outras. Fortran é uma linguagem popular para computação de alta performance, e é usada para programas que ranqueiam os supercomputadores mais rápidos do mundo.
+Swift é uma linguagem de programação compilada criada pela Apple para o desenvolvimento de programas, e aplicativos, para iOS, macOS, watchOS, tvOS e Linux. Ela foi projetada para trabalhar com os frameworks da Apple (Cocoa e Cocoa Touch), e com códigos em Objective-C.
 
 
 #Origens e Influências
 
-O primeiro compilador de Fortran foi desenvolvido por uma equipe da **IBM** chefiada por John W. Backus. Se pararmos para analisar, a linguagem Fortran, por ser mais antiga, mais influenciou do que foi influenciada.
+O projeto para a criação dessa linguagem de programação foi liderado pelo programador Chris Lattner, que contou com a eventual ajuda de alguns dos desenvolvedores da Apple. Esse projeto teve início em 2010, e a primeira versão da linguagem foi apresentada em 2014, na WWDC desse mesmo ano, e teve versões novas apresentadas em 2015 e em 2016. Swift foi desenvolvido, principalmente, como uma alternativa ao Objective-C, porém com uma escrita mais simples, e com maior expressividade, além de outras melhorias. 
+	Swift foi influenciada por várias linguagens, como: C, C#, Objective-C, D, Haskell, Python, Ruby e Rust. Para compreender melhor como se deram essas influências segue a linha do tempo:
+      
+•	1972: C
+•	1983: Objective-C
+•	1990: Haskell
+•	1991: Python
+•	1995: Ruby
+•	2000: C#
+•	2001: D
+•	2010: Rust
 
-Fortran foi influenciado apenas pela **Speedcoding**. Dentre as linguagens influenciadas, por Fortran I e suas "evoluções", estão: ALGOL 58, BASIC, PL/I, entre outras.
-
-Se formos tentar botar essa "árvore" de influências em uma linha do tempo ela ficaria parecida com essa:
-
-1953: Speedcoding
-
-1957: Fortran I
-
-1958: Fortran II e ALGOL 58
-
-1962: Fortran IV
-
-1964: BASIC e PL/I
-
-1978: Fortran 77
-
-1990: Fortran 90
-
-1995: Fortran 95
-
-2003: Fortran 03
-
-2008: Fortran 08
+E, apesar de ser uma linguagem de programação nova, ela já influenciou algumas linguagens, como Ruby – onde inspirou o “safe navigation operator” (Operador de navegação segura) – e Rust – onde inspirou o construtor “if let”.
 
 
 #Classificação
 
-Fortran é uma linguagem procedural e orientada a objetos, além de ser uma linguagem compilada.
+Swift é classificada como uma linguagem multi-paradigma, sendo:
+•	Imperativa
+•	Funcional
+•	Orientada a Objetos
 
-Quanto a sua tipagem, ela é forte e estática.
+Quanto a sua tipagem, ela é considerada:
+•	Estática
+•	Forte
+•	Inferida
 
 
 #Avaliação Comparativa
 
-**Writability:** Por não possuir registros para armazenar tipos de dados diferentes, a redigibilidade de Fortran fica prejudicada, pois essa falta de registro faz com que exista a necessidade de criar diversos vetores, para armazenar diversos tipos de elementos, e a manipulação desses vetores acaba tornando-se uma tarefa complexa. Se usarmos essa, e outras características, como o uso dos operadores ++, --, +=, -=, para compararmos Fortran com C, vemos que a linguagem C é mais redigível do que Fortran.
+**Readability:** 
 
-**Readability:** Se continuarmos a comparar Fortran com C, vemos que Fortran é mais legível do que a linguagem C, por alguns fatos. Apesar de versões mais antigas de Fortran também usarem, o uso de goto em C permite a criação de programas difíceis de entender (o uso de goto em Fortran foi removido em versões mais recentes, e ainda foram introduzidos recursos mais modernos a partir de Fortran 77). Além disso, C permite que símbolos possam ter mais de uma atribuição, como o operador (\*)
+Para comparar a leitura de duas linguagens, precisa-se de um código como exemplo, pois essa comparação depende muito do que o programa deseja fazer. No exemplo escolhido (código após “Expressiveness”) conclui-se que Swift é uma linguagem melhor de se ler do que a linguagem C. Por possuir um recurso que C não possui, Swift permite deixar o código mais simples, o que facilita a leitura do mesmo.
 
-**Expressiveness:** Quando vamos comparar a expressividade, vemos que ambas as linguagens, C e Fortran, não são muito expressivas. Se pegarmos um trecho de um código em Java, por exemplo, e passarmos para Fortran, vemos que o código precisa ser mudado radicalmente, ele fica maior, e mais difícil de se ler. Se fizermos o contrário, passarmos um trecho de um código de Fortran para Java, a estrutura principal do programa não é mudada, e o programa fica mais fácil de ser entendido. O mesmo acontece com C, quando comparamos com Java.
+**Writability:**
+
+Ainda usando a linguagem C como comparação, podemos dizer que Swift é uma linguagem boa para escrever. Inclusive, esse é um dos atributos que os desenvolvedores da Apple levaram em consideração para a criação da linguagem. A escrita dessa linguagem é mais intuitiva, e de fácil desenvolvimento, como em Python – similaridades na parte de orientação a objetos. Outro motivo para chegar a essa conclusão é a tipagem – forte e inferida – que contribui para que o código seja mais enxuto e mais fácil de ser escrito. 
+	“Swift is designed to make writing and maintaining correct programs easier for the developer.” (Trecho do texto “About Swift” retirado do site official da linguagem)
+
+
+**Expressiveness:** 
+
+Por possuir muitos recursos – Closures, Orientação a objetos, padrões de programação funcional, entre outros -, Swift pode ser considerada mais expressiva do que muitas outras linguagens. Continuando a comparação dela com a linguagem C, conseguimos concluir que Swift tem maior poder de expressão do que C usando o recurso de Closures como exemplo. Por possuir esse recurso, Swift mantém o código limpo, enxuto e com fácil compreensão, enquanto em C, para reproduzirmos esta mesma função, necessita-se de um código consideravelmente mais extenso, e de difícil compreensão
 
 #Exemplo de código
 
-Código para resolver uma equação do 2º grau em Fortran 77:
+•	**Swift**
 
-C 1 2 3 4 5 6
+func makeIncrementer (forIncrement amount: Int) -> () -> Int {
+	var runningTotal = 0
+	func incrementer () -> Int {
+		runningTotal += amount
+		return runningTotal
+	}
+	return incrementer
+}
 
-C2345678901234567890123456789012345678901234567890123456789012345
-      
-PROGRAM BASKHARA
+let incrementByTen = makeIncrementer(forIncrement: 10)
 
-C
-REAL :: A,B,C, DELTA, X1,X2, RE, IM
+//Returns a value of 10
+incrementByTen()
 
-C
-PRINT *, "Este programa resolve uma equação de 2o.grau"
-      
-PRINT *, "no formato: a*x**2 + b*x + c = 0"
+//Returns a value of 20
+incrementByTen()
 
-C
-      
-PRINT  10, "Digite a, b, c: "
+//Returns a value of 30
+incrementByTen()
 
-10   FORMAT( A, 1X, $)
+let incrementBySeven = makeIncrementer(forIncrement: 7)
 
-20   READ(*, *, ERR=20)A, B, C
+//Returns a value of 7
+incrementBySeven()
 
-C
-DELTA= B**2-4.0*A*C
+//Returns a value of 40
+incrementByTen()
 
-C
-IF( DELTA.GT.0 )THEN      ! (DUAS RAÍZES REAIS)
-          
-X1= ( -B-SQRT(DELTA) ) / ( 2.0*A )
-          
-X2= ( -B+SQRT(DELTA) ) / ( 2.0*A )
-          
-PRINT *, "RAIZES:  X1= ", X1
-          
-PRINT *, "X2= ", X2
-      
-ELSE
-          
-IF( DELTA.EQ.0 ) THEN ! (DUAS RAÍZES REAIS IGUAIS)
-          
-X1= -B / ( 2.0*A )
-          
-X2= X1
-          
-PRINT *, "RAIZES: X1=X2= ", X1
-      
-ELSE                      ! (DUAS RAÍZES COMPLEXAS)
-          
-RE= -B / ( 2.0*A )
-          
-IM= SQRT( -DELTA ) / ( 2.0*A )
-          
-PRINT *, "RAIZES COMPLEXAS: X1= ", RE,"- ", IM, "i"
-          
-PRINT *, "X2= ", RE, "+ ",IM, "i"
-          
-END IF
-      
-END IF
+•	**C**
 
-C
-END PROGRAM BASKHARA
+**(Exemplo que não funciona)**
+#include <stdio.h>
+
+typedef struct closure_s {
+  void (*incrementer) ();
+  void (*emitter) ();
+} closure;
+
+closure emit(int in) {
+
+  void incrementer() {
+    in++;
+  }
+
+  void emitter() {
+    printf("%d\n", in);
+  }
+
+  return (closure) {
+    incrementer,
+    emitter
+  };
+}
+
+main() {
+  closure test[] = {
+    emit(10),
+    emit(20)
+  };
+
+  test[0] . incrementer();
+  test[1] . incrementer();
+
+  test[0] . emitter();
+  test[1] . emitter();
+}
+
+**(Exemplo que, teoricamente, funciona)**
+#include <callback.h>
+#include <stdio.h>
+static void incrementer_(int *in) {
+    ++*in;
+}
+static void emitter_(int *in) {
+    printf("%d\n", *in);
+}
+int main() {
+    int in1 = 10, in2 = 20;
+    int (*incrementer1)() = alloc_callback(&incrememnter_, &in1);
+    int (*emitter1)() = alloc_callback(&emitter_, &in1);
+    int (*incrementer2)() = alloc_callback(&incrememnter_, &in2);
+    int (*emitter2)() = alloc_callback(&emitter_, &in2);
+    incrementer1();
+    incrementer2();
+    emitter1();
+    emitter2();
+    free_callback(incrementer1);
+    free_callback(incrementer2);
+    free_callback(emitter1);
+    free_callback(emitter2);
+}
+
+A escolha desses códigos ajuda a exemplificar o que foi dito na comparação entre as linguagens. Neles é possível ver que o código escrito em Swift – usando Closure – é consideravelmente mais enxuto, fácil de escrever, e de entender. Não há nada que atrapalhe o entendimento do código. Já em C, observa-se um código maior, mais complicado de escrever – pois precisa de um bom conhecimento da linguagem (uso de ponteiros) – e mais difícil de se compreender o que está sendo feito. 
+Após essa análise, pode-se concluir que em alguns casos, quando uma linguagem possui um poder maior de expressão, ela se torna uma linguagem mais fácil de ler (o que auxilia na manutenção do código) e mais fácil de escrever (o que auxilia na prototipação).
 
 
-#Bibliografia
+#Referências bibliográficas
 
-Wikipedia: [https://pt.wikipedia.org/wiki/Fortran#Pontos_fortes.2Ffracos_da_sintaxe](https://pt.wikipedia.org/wiki/Fortran#Pontos_fortes.2Ffracos_da_sintaxe "Fortran")
+Wikipedia PT: [https://pt.wikipedia.org/wiki/Swift_(linguagem_de_programa%C3%A7%C3%A3o)](https://pt.wikipedia.org/wiki/Swift_(linguagem_de_programa%C3%A7%C3%A3o))
 
-Wikipedia: [https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_procedural](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_procedural)
+Wikipedia EN: [https://en.wikipedia.org/wiki/Swift_(programming_language)#Comparisons_to_other_languages](https://en.wikipedia.org/wiki/Swift_(programming_language)#Comparisons_to_other_languages)
 
-Passei direto: [https://www.passeidireto.com/arquivo/1625736/exercicioscap1](https://www.passeidireto.com/arquivo/1625736/exercicioscap1)
+Swift (site oficial): [https://swift.org/about/](https://swift.org/about/)
 
-Wikipedia: [https://en.wikipedia.org/wiki/Fortran#Code_examples](https://en.wikipedia.org/wiki/Fortran#Code_examples)
+Stackoverflow: [http://stackoverflow.com/questions/4393716/is-there-a-a-way-to-achieve-closures-in-c](http://stackoverflow.com/questions/4393716/is-there-a-a-way-to-achieve-closures-in-c)
+
+Developer Apple: [https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html)
+
