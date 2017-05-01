@@ -85,64 +85,60 @@ incrementByTen()
 
 **(Exemplo que não funciona)**
 #include <stdio.h>
-
 typedef struct closure_s {
-  void (*incrementer) ();
-  void (*emitter) ();
+	void (*incrementer) ();
+	void (*emitter) ();
 } closure;
 
 closure emit(int in) {
-
-  void incrementer() {
-    in++;
-  }
-
-  void emitter() {
-    printf("%d\n", in);
-  }
-
-  return (closure) {
-    incrementer,
-    emitter
-  };
+	void incrementer() {
+		in++;
+	}
+	
+	void emitter() {
+		printf("%d\n", in);
+	}
+	
+	return (closure) {
+		incrementer,
+		emitter
+	};
 }
 
 main() {
-  closure test[] = {
-    emit(10),
-    emit(20)
-  };
-
-  test[0] . incrementer();
-  test[1] . incrementer();
-
-  test[0] . emitter();
-  test[1] . emitter();
+	closure test[] = {emit(10), emit(20)};
+	test[0] . incrementer();
+	test[1] . incrementer();
+	
+	test[0] . emitter();
+	test[1] . emitter();
 }
 
 **(Exemplo que, teoricamente, funciona)**
 #include <callback.h>
 #include <stdio.h>
+
 static void incrementer_(int *in) {
-    ++*in;
+	++*in;
 }
 static void emitter_(int *in) {
-    printf("%d\n", *in);
+	printf("%d\n", *in);
 }
+
 int main() {
-    int in1 = 10, in2 = 20;
-    int (*incrementer1)() = alloc_callback(&incrememnter_, &in1);
-    int (*emitter1)() = alloc_callback(&emitter_, &in1);
-    int (*incrementer2)() = alloc_callback(&incrememnter_, &in2);
-    int (*emitter2)() = alloc_callback(&emitter_, &in2);
-    incrementer1();
-    incrementer2();
-    emitter1();
-    emitter2();
-    free_callback(incrementer1);
-    free_callback(incrementer2);
-    free_callback(emitter1);
-    free_callback(emitter2);
+	int in1 = 10, in2 = 20;
+	int (*incrementer1)() = alloc_callback(&incrememnter_, &in1);
+	int (*emitter1)() = alloc_callback(&emitter_, &in1);
+	int (*incrementer2)() = alloc_callback(&incrememnter_, &in2);
+	int (*emitter2)() = alloc_callback(&emitter_, &in2);
+	incrementer1();
+	incrementer2();
+	emitter1();
+	emitter2();
+	free_callback(incrementer1);
+	free_callback(incrementer2);
+	free_callback(emitter1);
+	free_callback(emitter2);
 }
 
 A escolha desses códigos ajuda a exemplificar o que foi dito na comparação entre as linguagens. Neles é possível ver que o código escrito em Swift – usando Closure – é consideravelmente mais enxuto, fácil de escrever, e de entender. Não há nada que atrapalhe o entendimento do código. Já em C, observa-se um código maior, mais complicado de escrever – pois precisa de um bom conhecimento da linguagem (uso de ponteiros) – e mais difícil de se compreender o que está sendo feito. 
