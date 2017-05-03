@@ -7,15 +7,14 @@ Swift é uma linguagem de programação compilada criada pela Apple para o desen
 
 O projeto para a criação dessa linguagem de programação foi liderado pelo programador Chris Lattner, que contou com a eventual ajuda de alguns dos desenvolvedores da Apple. Esse projeto teve início em 2010, e a primeira versão da linguagem foi apresentada em 2014, na WWDC desse mesmo ano, e teve versões novas apresentadas em 2015 e em 2016. Swift foi desenvolvido, principalmente, como uma alternativa ao Objective-C, porém com uma escrita mais simples, e com maior expressividade, além de outras melhorias. 
 	Swift foi influenciada por várias linguagens, como: C, C#, Objective-C, D, Haskell, Python, Ruby e Rust. Para compreender melhor como se deram essas influências segue a linha do tempo:
-	
-	1972: C
-	1983: Objective-C
-	1990: Haskell
-	1991: Python
-	1995: Ruby
-	2000: C#
-	2001: D
-	2010: Rust
+	1. 1972: C
+	2. 1983: Objective-C
+	3. 1990: Haskell
+	4. 1991: Python
+	5. 1995: Ruby
+	6. 2000: C#
+	7. 2001: D
+	8. 2010: Rust
 
 E, apesar de ser uma linguagem de programação nova, ela já influenciou algumas linguagens, como Ruby – onde inspirou o “safe navigation operator” (Operador de navegação segura) – e Rust – onde inspirou o construtor “if let”.
 
@@ -23,14 +22,14 @@ E, apesar de ser uma linguagem de programação nova, ela já influenciou alguma
 #Classificação
 
 Swift é classificada como uma linguagem multi-paradigma, sendo:
-	Imperativa
-	Funcional
-	Orientada a Objetos
+	*Imperativa
+	*Funcional
+	*Orientada a Objetos
 
 Quanto a sua tipagem, ela é considerada:
-	Estática
-	Forte
-	Inferida
+	*Estática
+	*Forte
+	*Inferida
 
 
 #Avaliação Comparativa
@@ -53,7 +52,7 @@ Por possuir muitos recursos – Closures, Orientação a objetos, padrões de pr
 
 •	**Swift**
 
-func makeIncrementer (forIncrement amount: Int) -> () -> Int {
+'func makeIncrementer (forIncrement amount: Int) -> () -> Int {
 	var runningTotal = 0
 	func incrementer () -> Int {
 		runningTotal += amount
@@ -79,14 +78,14 @@ incrementBySeven()
 //returns a value of 7
 
 incrementByTen()
-//returns a value of 40
+//returns a value of 40'
 
 
 •	**C**
 
 **(Exemplo que não funciona)**
 
-#include <stdio.h>
+'#include <stdio.h>
 
 typedef struct closure_s {
 	void ( * incrementer)();
@@ -111,12 +110,12 @@ int main(){
 	test[1].incrementer();
 	test[0].emitter();
 	test[1].emitter();
-}
+}'
 
 
 **(Exemplo que, teoricamente, funciona)**
 
-#include "callback.h"
+'#include "callback.h"
 #include <stdio.h>
 
 static void incrementer(int * in)){
@@ -141,7 +140,7 @@ int main(){
 	free_callback(incrementer2);
 	free_callback(emitter1);
 	free_callback(emitter2);
-}
+}'
 
 
 A escolha desses códigos ajuda a exemplificar o que foi dito na comparação entre as linguagens. Neles é possível ver que o código escrito em Swift – usando Closure – é consideravelmente mais enxuto, fácil de escrever, e de entender. Não há nada que atrapalhe o entendimento do código. Já em C, observa-se um código maior, mais complicado de escrever – pois precisa de um bom conhecimento da linguagem (uso de ponteiros) – e mais difícil de se compreender o que está sendo feito. 
