@@ -22,14 +22,14 @@ E, apesar de ser uma linguagem de programação nova, ela já influenciou alguma
 #Classificação
 
 Swift é classificada como uma linguagem multi-paradigma, sendo:
-	*Imperativa
-	*Funcional
-	*Orientada a Objetos
+	Imperativa
+	Funcional
+	Orientada a Objetos
 
 Quanto a sua tipagem, ela é considerada:
-	*Estática
-	*Forte
-	*Inferida
+	Estática
+	Forte
+	Inferida
 
 
 #Avaliação Comparativa
@@ -52,7 +52,7 @@ Por possuir muitos recursos – Closures, Orientação a objetos, padrões de pr
 
 •	**Swift**
 
-'func makeIncrementer (forIncrement amount: Int) -> () -> Int {
+func makeIncrementer (forIncrement amount: Int) -> () -> Int {
 	var runningTotal = 0
 	func incrementer () -> Int {
 		runningTotal += amount
@@ -78,14 +78,14 @@ incrementBySeven()
 //returns a value of 7
 
 incrementByTen()
-//returns a value of 40'
+//returns a value of 40
 
 
 •	**C**
 
 **(Exemplo que não funciona)**
 
-'#include <stdio.h>
+#include <stdio.h>
 
 typedef struct closure_s {
 	void ( * incrementer)();
@@ -110,12 +110,12 @@ int main(){
 	test[1].incrementer();
 	test[0].emitter();
 	test[1].emitter();
-}'
+}
 
 
 **(Exemplo que, teoricamente, funciona)**
 
-'#include "callback.h"
+#include "callback.h"
 #include <stdio.h>
 
 static void incrementer(int * in)){
@@ -140,7 +140,7 @@ int main(){
 	free_callback(incrementer2);
 	free_callback(emitter1);
 	free_callback(emitter2);
-}'
+}
 
 
 A escolha desses códigos ajuda a exemplificar o que foi dito na comparação entre as linguagens. Neles é possível ver que o código escrito em Swift – usando Closure – é consideravelmente mais enxuto, fácil de escrever, e de entender. Não há nada que atrapalhe o entendimento do código. Já em C, observa-se um código maior, mais complicado de escrever – pois precisa de um bom conhecimento da linguagem (uso de ponteiros) – e mais difícil de se compreender o que está sendo feito. 
