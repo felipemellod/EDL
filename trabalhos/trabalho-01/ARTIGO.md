@@ -23,11 +23,13 @@ E, apesar de ser uma linguagem de programação nova, ela já influenciou alguma
 #Classificação
 
 Swift é classificada como uma linguagem multi-paradigma, sendo:
+
 	Imperativa
 	Funcional
 	Orientada a Objetos
 
 Quanto a sua tipagem, ela é considerada:
+
 	Estática
 	Forte
 	Inferida
