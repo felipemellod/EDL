@@ -1,9 +1,9 @@
-#Introdução
+# Introdução
 
 Swift é uma linguagem de programação compilada criada pela Apple para o desenvolvimento de programas, e aplicativos, para iOS, macOS, watchOS, tvOS e Linux. Ela foi projetada para trabalhar com os frameworks da Apple (Cocoa e Cocoa Touch), e com códigos em Objective-C.
 
 
-#Origens e Influências
+# Origens e Influências
 
 O projeto para a criação dessa linguagem de programação foi liderado pelo programador Chris Lattner, que contou com a eventual ajuda de alguns dos desenvolvedores da Apple. Esse projeto teve início em 2010, e a primeira versão da linguagem foi apresentada em 2014, na WWDC desse mesmo ano, e teve versões novas apresentadas em 2015 e em 2016. Swift foi desenvolvido, principalmente, como uma alternativa ao Objective-C, porém com uma escrita mais simples, e com maior expressividade, além de outras melhorias. 
 	Swift foi influenciada por várias linguagens, como: C, C#, Objective-C, D, Haskell, Python, Ruby e Rust. Para compreender melhor como se deram essas influências segue a linha do tempo:
@@ -20,22 +20,22 @@ O projeto para a criação dessa linguagem de programação foi liderado pelo pr
 E, apesar de ser uma linguagem de programação nova, ela já influenciou algumas linguagens, como Ruby – onde inspirou o “safe navigation operator” (Operador de navegação segura) – e Rust – onde inspirou o construtor “if let”.
 
 
-#Classificação
+# Classificação
 
 Swift é classificada como uma linguagem multi-paradigma, sendo:
 
-	Imperativa
-	Funcional
-	Orientada a Objetos
+	*Imperativa
+	*Funcional
+	*Orientada a Objetos
 
 Quanto a sua tipagem, ela é considerada:
 
-	Estática
-	Forte
-	Inferida
+	*Estática
+	*Forte
+	*Inferida
 
 
-#Avaliação Comparativa
+# Avaliação Comparativa
 
 **Readability:** 
 
@@ -51,11 +51,11 @@ Ainda usando a linguagem C como comparação, podemos dizer que Swift é uma lin
 
 Por possuir muitos recursos – Closures, Orientação a objetos, padrões de programação funcional, entre outros -, Swift pode ser considerada mais expressiva do que muitas outras linguagens. Continuando a comparação dela com a linguagem C, conseguimos concluir que Swift tem maior poder de expressão do que C usando o recurso de Closures como exemplo. Por possuir esse recurso, Swift mantém o código limpo, enxuto e com fácil compreensão, enquanto em C, para reproduzirmos esta mesma função, necessita-se de um código consideravelmente mais extenso, e de difícil compreensão
 
-#Exemplo de código
+# Exemplo de código
 
 •	**Swift**
 
-func makeIncrementer (forIncrement amount: Int) -> () -> Int {
+' func makeIncrementer (forIncrement amount: Int) -> () -> Int {
 	var runningTotal = 0
 	func incrementer () -> Int {
 		runningTotal += amount
@@ -81,7 +81,7 @@ incrementBySeven()
 //returns a value of 7
 
 incrementByTen()
-//returns a value of 40
+//returns a value of 40 '
 
 
 •	**C**
