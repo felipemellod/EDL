@@ -1,0 +1,18 @@
+import Html exposing (text)
+
+type alias Aluno = (String, Float, Float)
+type alias Turma = List Aluno
+
+media: Aluno -> Float
+media (_,n1,n2) = (n1+n2)/2
+
+nome: Aluno -> String
+nome (nm,_,_) = nm
+
+turma: Turma
+turma = [("Joao",7,4), ("Maria",10,8), ("Joana",7,7), ("Leandro",4,6), ("Caio",7,9)]
+
+medias: List Float
+medias = List.map media turma
+
+main = text (toString medias)
