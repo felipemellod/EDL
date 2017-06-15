@@ -1,0 +1,22 @@
+import Html exposing (text)
+
+type alias Aluno = (String, Float, Float)
+type alias Turma = List Aluno
+
+turma: Turma
+turma = [("Joao",7,4), ("Maria",10,8), ("Joana",7,7), ("Leandro",4,6), ("Caio",7,9)]
+
+media: Aluno -> Bool
+media (_,n1,n2) = ((n1+n2)/2)>=7
+
+aprovados: List Aluno
+aprovados = List.filter media turma
+
+ap: Aluno -> (String,Float)
+ap (nm,n1,n2) = (nm, (n1+n2)/2)
+
+a: List (String,Float)
+a = List.map ap aprovados
+
+
+main = text (toString a)
