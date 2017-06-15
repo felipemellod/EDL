@@ -1,0 +1,21 @@
+import Html exposing (text)
+
+type alias Aluno = (String, Float, Float)
+type alias Turma = List Aluno
+
+turma: Turma
+turma = [("Joao",7,4), ("Maria",10,8), ("Joana",7,7), ("Leandro",10,6), ("Caio",7,9)]
+
+p1: Aluno -> Bool
+p1 (_,n1,_) = (n1==10)
+
+nome: Aluno -> String
+nome (nm,_,_) = nm
+
+gabarito: List Aluno
+gabarito = List.filter p1 turma
+
+a: List String
+a = List.map nome gabarito
+
+main = text (toString a)
