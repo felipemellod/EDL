@@ -5,10 +5,9 @@
 local gameover = "Você perdeu"
 local youwon = "Parabéns, você ganhou!"
 -- Nome: variável "youwon"
--- Propriedade: Atribuição
--- Binding time: Execução
--- Explicação: A atribuição de um valor à uma variável
--- só pode ser feita em tempo de execução.
+-- Propriedade: Endereço
+-- Binding time: Compilação
+-- Explicação: Por ser uma variável global, seu espaço é alocado na memória em tempo de compilação.
 local buttons1 = {"Try again", "OK", enterbutton=2}
 local buttons2 = {"Play again", "OK", enterbutton=2}
 
@@ -16,10 +15,9 @@ function love.load ()
 	love.graphics.setBackgroundColor (255, 255, 255)
 	w = love.graphics.getWidth()
 	-- Nome: variável "w"
-	-- Propriedade: Alocação de memória
+	-- Propriedade: Endereço
 	-- Binding time: Execução
-	-- Apesar do tamanho da variável ser conhecido em tempo de compilação,
-	-- a alocação de memória dessa variável local é feita em tempo de execução.
+	-- Explicação: Por se tratar de uma variável local, seu espaço na memória é alocado em tempo de execução.
 	h = love.graphics.getHeight()
 	love.graphics.setColor(0, 0, 0)
     p1 = { x=50,  y=h-6, r=7 }
@@ -29,9 +27,9 @@ end
 
 function love.keypressed (key)
 	-- Nome: função "function"
-	-- Propriedade: Função
+	-- Propriedade: Semântica
 	-- Binding Time: Design
-	-- Explicação: O comportamento de uma função é definido antes de qualquer coisa do programa, em tempo de design da linguagem.
+	-- Explicação: A semântica de uma função é definida antes de qualquer coisa do programa, em tempo de design da linguagem.
     if key == 'left' then
 	-- Nome: condicional "if"
 	-- Propriedade: Estrutura de controle
@@ -51,7 +49,7 @@ end
 function love.update (dt)
     p2.y = p2.y + 0.3
 	-- Nome: Operador "+"
-	-- Propriedade: operador matemático
+	-- Propriedade: Semântica
 	-- Binding time: Compilação
 	-- Explicação: A semântica de operadores varia (entre tempo de implementação e compilação) de acordo com as linguagens.
 	-- Como LUA não possui tempo de implementação, a semântica de operadores ocorre em tempo de compilação.
@@ -96,6 +94,10 @@ function love.update (dt)
 		love.graphics.setColor(love.math.random(1, 254), love.math.random(1, 254), love.math.random(1, 254))
 		p2 = { x=love.math.random(0, w), y=0, r=love.math.random(3, 20) }
 	end
+	-- Nome: função random()
+	-- Propriedade: Valor
+	-- Binding time: Execução
+	-- Explicação: O valor retornado por essa função será gerado e passado apenas durante a execução do programa.
 	
 end
 
