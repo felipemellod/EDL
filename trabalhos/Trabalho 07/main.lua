@@ -5,53 +5,52 @@
 local buttons1 = {"Try again", "OK", enterbutton=2}
 local buttons2 = {"Play again", "OK", enterbutton=2}
 pontuacao = {}
--- trabalho 06
--- pontuacao = {} é um array que guardará a pontuação do jogador.
+
+--[[
+	trabalho 07
+	Array "objetos":
+	
+	Escopo: A array "objetos" é uma variável global, ou seja, pode ser vista em qualquer parte do programa.
+	
+	Tempo de vida: O tempo de vida da array é a duração da execução do jogo (tempo de vida estático).
+	
+	Alocação: A array "objetos" é alocada durante a função love.load, e aumentada dinâmicamente ao decorrer do jogo.
+	
+	Desalocação: É desalocada ao fim do programa, pois é uma variável global.
+]]--
 
 
 function love.load ()
 	love.graphics.setBackgroundColor (255, 255, 255)
 	w = love.graphics.getWidth()
-	-- Nome: variável "w"
-	-- Propriedade: Alocação de memória
-	-- Binding time: Execução
-	-- Apesar do tamanho da variável ser conhecido em tempo de compilação,
-	-- a alocação de memória dessa variável local é feita em tempo de execução.
 	pont=0
+	objetos={}
 	h = love.graphics.getHeight()
 	love.graphics.setColor(0, 0, 0)
 	pos = {x=5, y=5}
-	-- trabalho 06
-	-- pos = {x=5, y=5} é uma tupla contruída para guardar a posição da informação da pontuação do jogador.
     p1 = { x=50,  y=h-6, r=7 }
-	-- trabalho 06
-	-- p1 = { x=50, y=h-6, r=7 } é um exemplo de registro com três valores inteiros
-	
-	--trabalho 07
-	-- Escopo: Apesar de o objeto "p1" estar sendo criado dentro da função "love.load", ele não foi explicitado como local,
-	-- e portanto pode ser visto em qualquer parte do código, logo ele é uma variável global.
-	-- Tempo de vida: O objeto "p1" dura enquanto o jogo estiver em execução.
-	-- Alocação: Sua alocação ocorre dentro da função "love.load"
-	-- Desalocação: Ele é desalocado ao fim do jogo.
 	love.graphics.setColor(love.math.random(10, 240), love.math.random(10, 240), love.math.random(10, 240))
-    p2 = { x=50, y=0, r=6 }	
-	-- trabalho 07
-	-- Escopo: Assim como o objeto "p1", "p2" também é uma variável global.
-	-- Tempo de vida: Esse objeto dura enquanto não ultrapassa o limite da tela ou enquanto não colide com o objeto "p1".
-	-- Alocação: Sua alocação também ocorre dentro da função "love.load".
-	-- Desalocação: É desalocado quando ultrapassa o limite da tela ou quando colide com p1.
+    obj = { x=50, y=0, r=6 }
+	table.insert(objetos, obj)
+	
+	--[[
+		trabalho 07
+		Objeto da array "objetos":
+		
+		Escopo: Como a array "objetos" é global, seu elemento também será global.
+		
+		Tempo de vida: Seu tempo de vida vai desde quando ele é criado até sua remoção (p1 "pega" o objeto ou o objeto sai da tela)
+		
+		Alocação: Ele será criado, e alocado na array, quando outro elemento tiver sido removido/destruído.
+		
+		Desalocação: Será desalocado quando tiver sido "pego" pelo p1, ou quando tiver saído da tela
+	
+	]]--
+
 end
 
 function love.keypressed (key)
-	-- Nome: função "function"
-	-- Propriedade: Função
-	-- Binding Time: Design
-	-- Explicação: O comportamento de uma função é definido antes de qualquer coisa do programa, em tempo de design da linguagem.
     if key == 'left' then
-	-- Nome: condicional "if"
-	-- Propriedade: Estrutura de controle
-	-- Binding time: Design
-	-- Explicação: Por ser uma palavra reservada, sua "função" é dita em tempo de design da linguagem (manual).
         p1.x = p1.x - 5
     elseif key == 'right' then
         p1.x = p1.x + 5
@@ -64,12 +63,8 @@ function collides (o1, o2)
 end
 
 function love.update (dt)
-    p2.y = p2.y + 0.3
-	-- Nome: Operador "+"
-	-- Propriedade: operador matemático
-	-- Binding time: Compilação
-	-- Explicação: A semântica de operadores varia (entre tempo de implementação e compilação) de acordo com as linguagens.
-	-- Como LUA não possui tempo de implementação, a semântica de operadores ocorre em tempo de compilação.
+    obj.y = obj.y + 0.3
+
 	if love.keyboard.isDown("left") then
 		p1.x = p1.x - 0.3
 	elseif love.keyboard.isDown("right") then
@@ -78,14 +73,9 @@ function love.update (dt)
 
 	local gameover = string.format("Você perdeu! Sua pontuação foi: %d pontos", pont)
 	local youwon = string.format("Parabéns, você ganhou! Sua pontuação foi: %d pontos", pont)
-	-- Nome: variável "youwon"
-	-- Propriedade: Atribuição
-	-- Binding time: Execução
-	-- Explicação: A atribuição de um valor à uma variável
-	-- só pode ser feita em tempo de execução.
 	
-    if collides(p1, p2) then
-		if p1.r <= p2.r then
+    if collides(p1, obj) then
+		if p1.r <= obj.r then
 			p1.r=0
 			msg1 = love.window.showMessageBox('GAME OVER', gameover, buttons1, info)
 			if msg1 == 1 then
@@ -96,22 +86,20 @@ function love.update (dt)
 				pontuacao[#pontuacao+1] = pont
 			end
 		else
-			p1.r = p1.r + (p2.r/2)
-			p2.r = 0
+			p1.r = p1.r + (obj.r/2)
+			obj.r = 0
 			pont = pont + 1
+			for i=#objetos, 1, -1 do
+				if(objetos[i].r == 0) then
+					table.remove(objetos, i)
+				end
+			end
 		end
-		if (p2.r == 0) then
+		if (obj.r == 0) then
 			love.graphics.setColor(love.math.random(10, 240), love.math.random(10, 240), love.math.random(10, 240))
-			p2 = { x=love.math.random(0, w), y=0, r=love.math.random(3, 50) }
-			-- Nome: Retorno função "love.math.random(3, 20)"
-			-- Propriedade: Tipo de retorno 
-			-- Binding time: Compilação
-			-- Explicação: O tipo de retorno de uma função só pode ser "descoberto" em tempo de compilação.
-			
-			-- trabalho 07
-			-- Igual ao que foi descrito para o objeto "p2". A única mudança foi a alocação.
-			-- Alocação: É alocado dentro da função "love.update". Esse é o caso em que o objeto já foi desalocado e está
-			-- sendo alocado novamente.
+			obj = { x=love.math.random(0, w), y=0, r=love.math.random(3, 50) }
+			table.insert(objetos, obj)
+
 		end
 		if (p1.r >= h/2) then
 			msg2 = love.window.showMessageBox('YOU WON', youwon, buttons2, info)
@@ -124,21 +112,24 @@ function love.update (dt)
 		end
     end
 	
-	if (p2.y > h) then
+	if (obj.y >= h+(obj.r)) then
+		obj.r = 0
+		for i=#objetos, 1, -1 do
+			if(objetos[i].r == 0) then
+				table.remove(objetos, i)
+			end
+		end
 		love.graphics.setColor(love.math.random(10, 240), love.math.random(10, 240), love.math.random(10, 240))
-		p2 = { x=love.math.random(0, w), y=0, r=love.math.random(3, 50) }
-		-- trabalho 07
-		-- Igual ao que foi descrito para o objeto "p2". A única mudança foi a alocação.
-		-- Alocação: É alocado dentro da função "love.update". Esse é o caso em que o objeto já foi desalocado e está
-		-- sendo alocado novamente.
+		obj = { x=love.math.random(0, w), y=0, r=love.math.random(3, 50) }
+		table.insert(objetos, obj)
 	end
 	
 end
 
 function love.draw ()
     love.graphics.circle('fill', p1.x, p1.y-p1.r, p1.r)
-    love.graphics.circle('fill', p2.x,p2.y, p2.r)
+	for index, o in pairs (objetos) do
+		love.graphics.circle('fill', o.x, o.y, o.r)
+	end
 	love.graphics.printf(string.format("Pontuação: %d", pont), pos.x, pos.y, 150, "left")
-	-- trabalho 06
-	-- O parâmetro "AlignMode" da função love.graphics.printf se refere ao alinhamento do texto. Ele tem três possíveis valores: "center", "left" e "right"
 end
